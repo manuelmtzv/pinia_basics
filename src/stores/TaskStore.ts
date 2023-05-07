@@ -18,6 +18,9 @@ export const useTaskStore = defineStore('taskStore', {
     favCount(): number {
       return this.favs.length
     },
+    isEmpty(): boolean {
+      return !(this.tasks.length > 0)
+    },
   },
   actions: {
     async getTasks() {
@@ -52,6 +55,7 @@ export const useTaskStore = defineStore('taskStore', {
 
     deleteAllTasks() {
       try {
+        console.log(this.isEmpty)
         const tasks = [...this.tasks]
 
         this.$reset()

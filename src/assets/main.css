@@ -9,7 +9,10 @@ body * {
   font-family: 'Poppins';
 }
 
-/* app */
+/* container */
+.container {
+  min-height: 100vh;
+}
 
 /* header */
 header {
@@ -143,4 +146,30 @@ form input {
   padding: 5px;
   text-align: center;
   margin: 30px auto;
+}
+
+/* reset button */
+.reset {
+  max-width: 640px;
+  margin: 0 auto;
+  margin-top: auto;
+}
+.reset-button {
+  display: block;
+  margin-left: auto;
+  color: #fff;
+  background: #ff005d;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-size: 1em;
+  transition: 220ms border ease-in-out;
+}
+.reset-button.disabled {
+  background: #b62459;
+}
+.reset-button:not(.disabled):hover {
+  border-color: #2c2c2c;
 }

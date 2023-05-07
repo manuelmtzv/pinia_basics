@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <!-- Heading -->
     <header>
       <img src="./assets/pinia-logo.svg" alt="Pinia icon" />
@@ -23,8 +23,17 @@
     <!-- Task List -->
     <TaskList v-else :filter="filter" />
 
-    <!-- Delete all -->
-    <button @click="taskStore.deleteAllTasks">Reset</button>
+    <!-- Reset all -->
+    <div class="reset">
+      <button
+        @click="taskStore.deleteAllTasks"
+        class="reset-button"
+        :class="{ disabled: taskStore.isEmpty }"
+        :disabled="taskStore.isEmpty"
+      >
+        Reset
+      </button>
+    </div>
   </div>
 </template>
 

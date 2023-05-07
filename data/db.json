@@ -1,3 +1,9 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "1098f3f7-06dd-4f0b-aecc-eb3c053ed73d",
+      "title": "Play with friends",
+      "isFav": false
+    }
+  ]
 }
